@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>US Airforce Jets App</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	
+	<h1>Obama Rocks Your Sockz</h1>
+
+  <ul class="jets">
+  <% for(var i=0; i<jets.length; i++) {%>
+    <li class="jet">
+      <span><%= jets[i].name %></span>
+      <span><%= jets[i].use %></span>
+	  <span><%= jets[i].age %></span>
+    </li>
+  <% } %>
+  </ul>
+
+ 	
+  <form action="/jets" method="POST">
+  <input type="text" placeholder="name" name="name">
+  <input type="text" placeholder="use" name="use">
+  <input type="text" placeholder="age" name="age">	
+	  
+  <button type="submit">Submit</button>
+	  
+</form>
+	
+</body>
+</html>
